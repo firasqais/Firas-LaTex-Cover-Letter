@@ -1,0 +1,210 @@
+%%%%%%%%%%%%%%%%%
+% This is an example cover letter written by
+% Firas Al-Doghman 
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%%%%%%%%%%%%%%%%
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+
+
+\documentclass[10pt,a4paper,ragged2e]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+%\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Carlito}
+\else
+  % If using pdflatex:
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+\fi
+\usepackage{mdframed}
+\usepackage{framed}
+\usepackage{ifsym}
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{001100}
+\colorlet{heading}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+\setlength{\arrayrulewidth}{5pt}
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\renewenvironment{leftbar}[2][\hsize]
+{
+    \def\FrameCommand
+    {
+        %{\color{#2}\vrule width 2.5pt }
+        \hspace{0pt}
+        
+        \begin{picture}(20,40)%
+                              \put(3,2){\color{#2}\circle*{10}}%
+                              \put(3,4){\color{#2}\line(0,1){40}} %
+                              \put(3,42){\color{#2}\circle*{10}}%
+                              \put(10,7){#1}
+                            \end{picture}%
+                           
+        
+    }
+    \MakeFramed{\hsize#1\advance\hsize-\width\FrameRestore}
+}
+{\endMakeFramed}
+
+\newcommand{\vlaplace}[1][]{\mbox{\setlength{\unitlength}{0.1em}%
+                            
+                            \begin{picture}(10,20)%
+                            
+                              \put(3,2){\circle{4}}%
+                              \put(3,4){\line(0,1){12}}%
+                              \put(3,18){\circle*{4}}%
+                              \put(10,7){#1}
+                            \end{picture}%
+                           }%
+                     }%
+
+
+\begin{document}
+
+\name{{Firas Al-Doughman}}
+% \tagline{Outlandish IT Manager, Technical Hoarder \& Proud Geek}
+
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+%\photo{2.5cm}{isso}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \normalsize{\email{firasqais@yahoo.com}}
+    \phone{0451940204}
+  \location{Sydney, Australia}
+  
+   \linkedin{linkedin.com/in/firasal-doghman}
+    \twitter{@firasqais}
+    \github{github.com/firasqais}
+    
+    % web: www.techchain.me
+%   \github{github.com/mmayer} % I'm just making this up though.
+%   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
+}
+
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+
+
+\textcolor{VividPurple}{\rule{17cm}{0.75mm}}
+
+
+\vspace{1cm}
+\begin{leftbar}{VividPurple}
+\addrto{%
+
+\normalsize
+Faculty Search Committee\\
+Department of Computer Science\\
+Clemson University\\
+Clemson, SC 29634-0974
+}
+\end{leftbar}
+\vspace{1.2cm}
+
+\large
+
+\greetto{To Whom It May Concern,}
+
+\vspace{0.5cm}
+
+
+\begin{newlfm}\large
+
+I am writing to apply for the position of assistant
+professor in Clemson University's Computer Science Department.  I plan to receive my
+Ph.D.\ degree from the University of Illinois at
+Urbana-Champaign in Summer of 2006.  My adviser is
+Prof.\ Nitin H.\ Vaidya, and my general areas of interest
+include wireless and sensor network performance and security.
+ Having many friends and family in the area, I would be
+most enthused to return to the South permanently by accepting
+a position at your institution.
+\vspace{0.4cm}
+
+In my graduate work, I focus on the design of
+energy-efficient protocols and secure key distribution.
+More specifically, I have explored various techniques at
+multiple layers of the network stack to effectively reduce
+the energy consumption of wireless communication.  In security,
+my work was the first to propose leveraging channel diversity
+for sensor network key distribution.  My research appears in 
+the \textit{IEEE Transactions on Mobile Computing} journal as
+well as \textit{Infocom 2006} and \textit{ICDCS 2005},
+prestigious conferences in the areas of networking and distributed
+systems, respectively.
+
+\vspace{0.4cm}
+
+Enclosed is my curriculum vitae (including a list of
+publications), contact information for my references, a research
+statement, and a teaching statement.  All of my publications and
+presentations are available at:
+
+\url{http://www.crhc.uiuc.edu/~mjmille2/publications/}
+
+Please let me know if there are any other materials
+or information that will assist you in processing my application.
+
+\vspace{0.4cm}
+
+Thank you for your consideration.  I look forward to
+hearing from you.
+
+\end{newlfm}
+\vspace{1cm}
+
+\hspace{13 cm}
+\large
+\closeline{Sincerely,}
+\vspace{1cm}
+
+\Large
+\hspace{13 cm}\textit{{Firas Al-Doughman}}
+
+\clearpage
+
+
+% \divider
+% 
+% \printbibliography[heading=pubtype,title={\printinfo{\faGroup}{Conference Proceedings}},type=inproceedings]
+% 
+
+
+\end{document}
